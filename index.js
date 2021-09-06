@@ -1,3 +1,10 @@
+var dateInput = document.querySelector("#birthday-input");
+var cheackBtn = document.querySelector("#cheack");
+var outputMSg =document.querySelector("#output");
+
+
+
+
 function reverseStr(str){
     var listOfChars =str.split('');
     var reverseListOfChars = listOfChars.reverse();
@@ -135,10 +142,17 @@ function getNextPalidromeDate(date){
 
 }
 
-var date = {
-    day: 31,
-    month: 12,
-    year: 2020
-};
 
-console.log(getNextPalidromeDate(date))
+function clickHandler(){
+    console.log(dateInput.value);
+}
+
+cheackBtn.addEventListener("click", clickHandler)
+
+// var date = {
+//     day: 31,
+//     month: 12,
+//     year: 2020
+// };
+
+// console.log(getNextPalidromeDate(date))
