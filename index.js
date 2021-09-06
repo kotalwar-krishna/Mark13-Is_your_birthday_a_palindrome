@@ -1,6 +1,6 @@
 var dateInput = document.querySelector("#birthday-input");
 var cheackBtn = document.querySelector("#cheack");
-var outputMSg =document.querySelector("#output");
+var outputMSg = document.querySelector(".output");
 
 
 
@@ -144,10 +144,30 @@ function getNextPalidromeDate(date){
 
 
 function clickHandler(){
-    console.log(dateInput.value);
+    var bdayStr = dateInput.value;
+
+    if(bdayStr !== ''){
+        var dateInList = bdayStr.split('-');
+        var date = {
+            day: Number(dateInList[2]),
+            month: Number(dateInList[1]),
+            year:  Number(dateInList[0])
+        }
+    }
+
+    var isGivenDatePalidrome = cheackPalidrmeForAllDateFormats(date);
+    // console.log(isGivenDatePalidrome);
+
+    if(isGivenDatePalidrome){
+        outputMSg.innerText = "Your BirthDate Is Palidrome."
+    }else{
+        var listP = getNextPalidromeDate(date);
+        console.log(listP);
+        outputMSg.innerText = "The next palidrome date(yyyy-mm-dd) is: " + listP[1].year+"-"+listP[1].month+"-"+listP[1].day +" after " + listP[0] +" days."
+    }
 }
 
-cheackBtn.addEventListener("click", clickHandler)
+cheackBtn.addEventListener("click", clickHandler);
 
 // var date = {
 //     day: 31,
