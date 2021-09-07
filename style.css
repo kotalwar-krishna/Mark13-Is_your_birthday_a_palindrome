@@ -1,0 +1,40 @@
+body{
+    background-color: grey;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+}
+
+.heading {
+    text-align: center;
+    padding: 1rem;
+}
+
+input {
+    text-align: center;
+    font-size: larger;
+    width: 60%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 10px;
+}
+
+button {
+    text-align: center;
+    font-size: larger;
+    max-width: 30%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.output {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
